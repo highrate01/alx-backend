@@ -7,6 +7,7 @@ import csv
 import math
 from typing import List, Dict
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -43,11 +44,13 @@ class Server:
         Retrieve a page of data with deletion-resilient pagination.
 
         Args:
-        index (int): The start index of the current page (None means start from the beginning)
-        page_size (int): The number of items per page
+            index (int): The start index of the current page
+                (None means start from the beginning)
+            page_size (int): The number of items per page
 
         Returns:
-        Dict: A dictionary containing pagination information and the requested data
+            Dict: A dictionary containing pagination
+            information and the requested data
         """
         indexed_data = self.indexed_dataset()
         data_length = len(indexed_data)
