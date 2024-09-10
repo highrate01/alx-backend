@@ -9,8 +9,10 @@ from flask_babel import Babel
 app = Flask(__name__)
 babel = Babel(app)
 
+
 @app.route("/")
 def index():
+    """returns index"""
     return render_template('0-index.html')
 
 
