@@ -23,7 +23,7 @@ app.config.from_object(Config)
 @app.route("/")
 def index():
     """returns index"""
-    return render_template('0-index.html')
+    return render_template('2-index.html')
 
 
 @babel.localeselector

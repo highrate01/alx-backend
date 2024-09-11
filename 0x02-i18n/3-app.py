@@ -3,9 +3,8 @@
 Basic Babel setup
 """
 
-from flask import Flask, render_template
-from flask_babel import Babel, gettext
-from flask import g, request
+from flask import Flask, render_template, request
+from flask_babel import Babel, _
 
 
 class Config:
@@ -23,7 +22,7 @@ app.config.from_object(Config)
 @app.route("/")
 def index():
     """returns index"""
-    return render_template('0-index.html')
+    return render_template('3-index.html')
 
 
 @babel.localeselector
