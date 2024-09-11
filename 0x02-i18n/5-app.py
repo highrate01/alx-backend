@@ -12,6 +12,7 @@ class Config:
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
+
 app = Flask(__name__)
 babel = Babel(app)
 app.config.from_object(Config)
@@ -22,6 +23,7 @@ users = {
     3: {"name": "Spock", "locale": "kg", "timezone": "Vulcan"},
     4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"},
 }
+
 
 def get_user():
     """Retrieve a user by ID from the URL parameter."""
