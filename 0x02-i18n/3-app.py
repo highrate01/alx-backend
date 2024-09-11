@@ -29,7 +29,7 @@ def index():
 def get_locale():
     """determine the best match with
     the supported languages."""
-    locale =  request.accept_languages.best_match(
+    locale = request.accept_languages.best_match(
             app.config['LANGUAGES'])
     g.lang_code = locale
     return locale
