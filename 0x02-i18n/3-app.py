@@ -3,8 +3,8 @@
 Basic Babel setup
 """
 
-from flask import Flask, render_template, request
-from flask_babel import Babel, gettext
+from flask import Flask, render_template, request, g
+from flask_babel import Babel, _
 
 
 class Config:
@@ -29,8 +29,10 @@ def index():
 def get_locale():
     """determine the best match with
     the supported languages."""
-    return request.accept_languages.best_match(
+    locale =  request.accept_languages.best_match(
             app.config['LANGUAGES'])
+    g.lang_code = locale
+    return locale
 
 
 if __name__ == '__main__':
