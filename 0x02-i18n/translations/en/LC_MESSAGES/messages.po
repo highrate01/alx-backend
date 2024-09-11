@@ -27,13 +27,13 @@ msgid "home_header"
 msgstr "Hello world!"
 
 #: env/lib/python3.10/site-packages/click/core.py:1120
-msgid "Aborted!"
-msgstr ""
+msgid "logged_in_as"
+msgstr "You are logged in as %(username)s."
 
 #: env/lib/python3.10/site-packages/click/core.py:1309
 #: env/lib/python3.10/site-packages/click/decorators.py:559
-msgid "Show this message and exit."
-msgstr ""
+msgid "not_logged_in"
+msgstr "You are not logged in."
 
 #: env/lib/python3.10/site-packages/click/core.py:1340
 #: env/lib/python3.10/site-packages/click/core.py:1370
