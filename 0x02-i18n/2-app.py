@@ -5,7 +5,6 @@ Basic Babel setup
 
 from flask import Flask, render_template
 from flask_babel import Babel
-from flask import g, request
 
 
 class Config:
@@ -21,13 +20,13 @@ app.config.from_object(Config)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     """returns index"""
     return render_template('2-index.html')
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """determine the best match with
     the supported languages."""
     return request.accept_languages.best_match(
@@ -35,4 +34,4 @@ def get_locale():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5002, debug=True)
