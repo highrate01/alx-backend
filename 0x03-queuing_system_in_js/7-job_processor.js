@@ -4,7 +4,7 @@ import kue from 'kue';
 const blacklistedNumbers = ['4153518780', '4153518781'];
 
 // Function to send notification
-function sendNotification(phoneNumber, message, job, done) {
+function sendNotification (phoneNumber, message, job, done) {
   // Track job progress to 0%
   job.progress(0, 100);
 
@@ -15,10 +15,10 @@ function sendNotification(phoneNumber, message, job, done) {
   } else {
     // Track progress to 50%
     job.progress(50, 100);
-    
+
     // Log the notification message
     console.log(`Sending notification to ${phoneNumber}, with message: ${message}`);
-    
+
     // Simulate job completion
     setTimeout(() => {
       job.progress(100, 100);
